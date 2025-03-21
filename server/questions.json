@@ -1,0 +1,25 @@
+[
+    { "id": 1, "question": "What is 2 + 2?", "answers": [
+        { "text": "4", "correct": true },
+        { "text": "3", "correct": false }
+      ]
+    },
+    { "id": 2, "question": "Which planet is known as the Red Planet?", "answers": [
+        { "text": "Earth", "correct": false },
+        { "text": "Mars", "correct": true }
+      ]
+    },
+    { "id": 3, "question": "Mis Linnas me elame?", "answers": [
+        { "text": "Viljandi", "correct": true },
+        { "text": "Tallinn", "correct": false },
+        { "text": "Rakvere", "correct": true },
+        { "text": "Türi", "correct": true },
+        { "text": "Paide", "correct": false },
+        { "text": "Haapsalu", "correct": true },
+        { "text": "Sürgavere", "correct": true },
+        { "text": "Pärnu", "correct": true },
+        { "text": "Tartu", "correct": false },
+        { "text": "Savikoti", "correct": true }
+      ]
+    }
+  ]
