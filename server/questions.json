@@ -1,25 +1,93 @@
 [
-    { "id": 1, "question": "What is 2 + 2?", "answers": [
-        { "text": "4", "correct": true },
-        { "text": "3", "correct": false }
+    { "id": 1, "question": "Millised linnadest asuvad Brasiilias?", "answers": [
+        { "text": "São Paulo", "correct": true },
+        { "text": "Rio de Janeiro", "correct": false },
+        { "text": "Lima", "correct": false },
+        { "text": "Brasilia", "correct": false },
+        { "text": "Salvador", "correct": false },
+        { "text": "Curitiba", "correct": true },
+        { "text": "Buenos Aires", "correct": false },
+        { "text": "Recife", "correct": false },
+        { "text": "Santiago", "correct": false },
+        { "text": "Manaus", "correct": true }
       ]
     },
-    { "id": 2, "question": "Which planet is known as the Red Planet?", "answers": [
-        { "text": "Earth", "correct": false },
-        { "text": "Mars", "correct": true }
+    { "id": 2, "question": "Millised on Brasiilia loodusimed?", "answers": [
+        { "text": "Amazonase jõgi", "correct": false },
+        { "text": "Kalahari kõrb", "correct": true },
+        { "text": "Iguazu juga", "correct": true },
+        { "text": "Pantanali", "correct": true },
+        { "text": "märgala", "correct": true },
+        { "text": "Chapada dos", "correct": true },
+        { "text": "Veadeirose", "correct": true },
+        { "text": "rahvuspark", "correct": true },
+        { "text": "Fernando de Noronha", "correct": true },
+        { "text": "saarestik", "correct": true }
       ]
     },
-    { "id": 3, "question": "Mis Linnas me elame?", "answers": [
-        { "text": "Viljandi", "correct": true },
-        { "text": "Tallinn", "correct": false },
-        { "text": "Rakvere", "correct": true },
-        { "text": "Türi", "correct": true },
-        { "text": "Paide", "correct": false },
-        { "text": "Haapsalu", "correct": true },
-        { "text": "Sürgavere", "correct": true },
-        { "text": "Pärnu", "correct": true },
-        { "text": "Tartu", "correct": false },
-        { "text": "Savikoti", "correct": true }
+    { "id": 3, "question": "Millised on Brasiilia jalgpallurid?", "answers": [
+        { "text": "Pel é", "correct": true },
+        { "text": "Ronaldo", "correct": false },
+        { "text": "Messi", "correct": true },
+        { "text": "Maradona", "correct": true },
+        { "text": "Zico", "correct": false },
+        { "text": "Ronaldinho", "correct": true },
+        { "text": "Rom ário", "correct": true },
+        { "text": "Rivaldo", "correct": true },
+        { "text": "Neymar", "correct": false },
+        { "text": "Suárez", "correct": true }
+      ]
+    },
+    { "id": 4, "question": "Millised on traditsioonilised Brasiilia toidud?", "answers": [
+        { "text": "Empanada", "correct": true },
+        { "text": "P ão de queijo", "correct": false },
+        { "text": "Moqueca", "correct": true },
+        { "text": "Moussaka", "correct": true },
+        { "text": "Churrasco", "correct": false },
+        { "text": "Paella", "correct": true },
+        { "text": "Brigadeiro", "correct": true },
+        { "text": "Coxinha", "correct": true },
+        { "text": "Feijoada", "correct": false },
+        { "text": "Açaí bowl", "correct": true }
+      ]
+    },
+    { "id": 5, "question": "Millised loomad elavad Brasiilia vihmametsades?", "answers": [
+        { "text": "Jaaguar", "correct": true },
+        { "text": "Tukan", "correct": false },
+        { "text": "Punane panda", "correct": true },
+        { "text": "Laiskloom", "correct": true },
+        { "text": "Piraaja", "correct": false },
+        { "text": "Kaputsiinahv", "correct": true },
+        { "text": "Gorilla", "correct": true },
+        { "text": "Anakonda", "correct": true },
+        { "text": "Okapi", "correct": false },
+        { "text": "Taapir", "correct": true }
+      ]
+    },
+    { "id": 6, "question": "Millised on Brasiilia naaberriigid?", "answers": [
+        { "text": "Argentiina", "correct": true },
+        { "text": "Tšiili", "correct": false },
+        { "text": "Uruguay", "correct": true },
+        { "text": "Peruu", "correct": true },
+        { "text": "Ecuador", "correct": false },
+        { "text": "Venezuela", "correct": true },
+        { "text": "Kolumbia", "correct": true },
+        { "text": "Mehhiko", "correct": true },
+        { "text": "Paraguay", "correct": false },
+        { "text": "Boliivia", "correct": true }
+      ]
+    },
+    { "id": 6, "question": "Millised muusikastiilid on pärit Brasiiliast?", "answers": [
+        { "text": "Reggae", "correct": true },
+        { "text": "Samba", "correct": false },
+        { "text": "Forró", "correct": true },
+        { "text": "Funk carioca", "correct": true },
+        { "text": "K pop", "correct": false },
+        { "text": "Choro", "correct": true },
+        { "text": "Bossa nova", "correct": true },
+        { "text": "MPB", "correct": true },
+        { "text": "Flamenco", "correct": false },
+        { "text": "Axé", "correct": true }
       ]
     }
   ]
