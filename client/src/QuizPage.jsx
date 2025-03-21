@@ -10,7 +10,7 @@ function QuizPage({ teams, setTeams }) {
     useEffect(() => {
       const getQuestions = async () => {
         try {
-          const response = await axios.get('https://quiz.webcodes.ee/quiz')
+          const response = await axios.get('https://quizback.webcodes.ee/quiz')
           setQuestions(response.data)
         } catch (error) {
           console.log(error);
@@ -64,7 +64,7 @@ function QuizPage({ teams, setTeams }) {
             <h3 className="question-text">{questions[currentQuestionIndex].question}</h3>
         )}
             <div className="quiz-container">
-                <h1 className="quiz-header">Quiz App</h1>
+                <h1 className="quiz-header">Kolmevõistlus</h1>
                 <div className="team-info">
                     {teams.map((team, index) => (
                         <div key={index} className="team">
@@ -100,14 +100,14 @@ function QuizPage({ teams, setTeams }) {
                             onClick={prevQuestion} 
                             disabled={currentQuestionIndex === 0} 
                             className="nav-button">
-                            ◀ Prev
+                            ◀ Eelmine
                         </button>
                         <span className="question-count"> {currentQuestionIndex + 1} / {questions.length} </span>
                         <button 
                             onClick={nextQuestion} 
                             disabled={currentQuestionIndex === questions.length - 1} 
                             className="nav-button">
-                            Next ▶
+                            Järgmine ▶
                         </button>
                     </div>
                 </div>
