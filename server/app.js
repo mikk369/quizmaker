@@ -22,5 +22,5 @@ const PORT = 2999;
 
 app.listen(PORT, () => {
     console.log('Server running at https://quiz.webcodes.ee/quiz');
-    // console.log('Server running at http://localhost');
+    // console.log('Server running at http://localhost:2999/quiz');
 });

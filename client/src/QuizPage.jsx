@@ -11,6 +11,7 @@ function QuizPage({ teams, setTeams }) {
       const getQuestions = async () => {
         try {
           const response = await axios.get('https://quizback.webcodes.ee/quiz')
+        //   const response = await axios.get('http://localhost:2999/quiz')
           setQuestions(response.data)
         } catch (error) {
           console.log(error);
@@ -20,30 +21,41 @@ function QuizPage({ teams, setTeams }) {
     }, []);
     
     const handleAnswerClick = (correct, index) => {
-      const newStatus = [...answerStatus];
-      newStatus[currentQuestionIndex] = newStatus[currentQuestionIndex] || [];
-      newStatus[currentQuestionIndex][index] = correct;
-  
-      setAnswerStatus(newStatus);
-  
-      if (correct) {
-          const updatedTeams = [...teams];
-          updatedTeams[currentTeam].score += 10;
-          setTeams(updatedTeams);
-      }
-  };
-
-  const nextQuestion = () => {
-    if (currentQuestionIndex < questions.length - 1) {
-        // Reset the answer status for the current question immediately
         const newStatus = [...answerStatus];
-        newStatus[currentQuestionIndex] = [];  // Clear statuses for the current question
+        newStatus[currentQuestionIndex] = newStatus[currentQuestionIndex] || [];
+        newStatus[currentQuestionIndex][index] = correct;
+      
         setAnswerStatus(newStatus);
+    
+        const updatedTeams = [...teams];
+    
+        if (correct) {
+            updatedTeams[currentTeam].score += 10; // Increase score for the current question
+        } else {
+            updatedTeams[currentTeam].score = 0; // Reset current question's score
+        }
+    
+        setTeams(updatedTeams);
+    };
 
-        // Move to the next question
-        setCurrentQuestionIndex(currentQuestionIndex + 1);
-    }
-};
+    const nextQuestion = () => {
+        if (currentQuestionIndex < questions.length - 1) {
+            // Move to the next question
+            setCurrentQuestionIndex(currentQuestionIndex + 1);
+    
+            // Update total scores before moving to the next question
+            const updatedTeams = teams.map(team => ({
+                ...team,
+                totalScore: team.totalScore + team.score, // Add current round's score to totalScore
+                score: 0 // Reset the current round's score
+            }));
+    
+            setTeams(updatedTeams);
+    
+            // Reset the answer status for the next question
+            setAnswerStatus([]);
+        }
+    };
 
 
   const prevQuestion = () => {
@@ -81,6 +93,16 @@ function QuizPage({ teams, setTeams }) {
                             <option key={index} value={index}>{team.name}</option>
                         ))}
                     </select>
+                </div>
+                <div className="totals-div">
+                    <h3>Koondpunktid</h3>
+                    <div className="total-points">
+                        {teams.map((team, i) => (
+                            <div className="total">
+                                <strong>{team.name}</strong>: {team.totalScore}
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
             {questions.length > 0 && (
